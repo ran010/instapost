@@ -8,6 +8,9 @@ gem 'sqlite3'
 
 gem 'carrierwave'
 
+
+gem 'simple_form'
+
 #installing devise i.e login sign in etc
 gem 'devise'
 
