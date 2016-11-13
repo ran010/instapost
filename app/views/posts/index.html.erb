@@ -1,12 +1,17 @@
 <% @posts.each do |post| %>
   <%= image_tag post.user.photo %>
   <%= post.user.name %>
-  
+  <br>
   <%= image_tag post.photo %>
+  <br>
   <%= post.description %>
   <br>
   <% if post.user == current_user %>
       <%= link_to 'Edit Post', edit_post_path(post.id) %>
+      <br>
+      <%= link_to 'Delete Post', post_path(post.id), method: :delete %>
   <% end %>
+  <br>
+  
   <br>
 <% end %>

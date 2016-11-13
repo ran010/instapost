@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-    before_action :is_owner?, only: [:edit, :update]
+    before_action :is_owner?, only: [:edit, :update, :destroy
+    ]
     def index
       @posts = Post.all.order('created_at DESC')
     end
@@ -14,6 +15,11 @@ class PostsController < ApplicationController
      else
         render :edit, status: :unprocessable_entity
      end
+    end
+    def destroy
+        @post = Post.find(params[:id])
+        @post.destroy
+        redirect_to root_path
     end
     def new
         @post = Post.new
