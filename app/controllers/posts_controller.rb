@@ -1,4 +1,13 @@
 class PostsController < ApplicationController
+  
+  def upvote
+    
+  end
+
+  def downvote
+
+  end
+  
     before_action :is_owner?, only: [:edit, :update, :destroy
     ]
     def index

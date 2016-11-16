@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   root 'posts#index'
   resources :posts do
     resources :comments 
-   
+    resources :upvotes
+    resources :downvote
+    
   end
    resources :users, only: :show
   # Example of regular route:
