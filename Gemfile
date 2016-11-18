@@ -18,6 +18,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'acts_as_votable', '~> 0.10.0'
 
+
+gem 'font-awesome-sass', '~> 4.6.2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
