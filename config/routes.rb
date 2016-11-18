@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments 
     resources :upvotes
-    resources :downvote
+    resources :downvotes
     
   end
    resources :users, only: :show
