@@ -21,6 +21,8 @@ gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'font-awesome-sass', '~> 4.6.2'
 
+gem 'will_paginate', '~> 3.0.7'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

@@ -1,4 +1,12 @@
+<br>
+<div class="container">
+      <div class="container-fluid">
+        <div class="col-md-6">
+          <div class="boxed" >
+        <div id="box">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
+</div>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :patch }) do |f| %>
   <%= devise_error_messages! %>
@@ -34,9 +42,9 @@
 
   <div class="field">
     <%= f.label 'Profile Picture' %><br>
-    <%= f.file_field :photo %>
+    <%= f.file_field :photo,class: "picmid" %>
   </div>
-
+  <br>
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
@@ -45,5 +53,9 @@
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
+<!-- %= link_to "Back", :back,class:"btn btn-success" %>-->
+<br>
+</div>
+</div>
+</div>

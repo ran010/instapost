@@ -1,35 +1,94 @@
-<h2>Sign up</h2>
+
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-  <div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name, autofocus: true %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %>
+  <div class="container">
+      <div class="container-fluid">
+      
+      
+ <div class="col-md-6">
+    <div class="boxed" >
+        <div id="box">
+      <h2>Sign Up</h2>
+    </div>
+    <!-- Username -->
+   
+    <div class="control-group">
+      <%= f.label :name,class:"control-label", for:"email" %>
+      
+      <div class="controls">
+         
+  <%= f.text_field :name, autofocus: true, id:"username", name:"username", placeholder:"Name", class:"input-xlarge" %>
+        
+        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+      </div>
+    </div>
+ <!-- Email -->
+    <div class="control-group">
+      <!-- E-mail -->
+    
+       <%= f.label :email,class:"control-label", for:"email" %>
+      <div class="controls">
+       
+    <%= f.email_field :email, autofocus: true, id:"email", name:"email", placeholder:"Email", class:"input-xlarge" %>
+       
+        <p class="help-block">Please provide your E-mail</p>
+      </div>
+    </div>
+   <!-- Pssword -->
+    <div class="control-group">
+      <!-- Password-->
+     
+      <%= f.label :password,  class:"control-label", for:"password" %>
+      <div class="controls">
+         
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-  <div class="field">
-  <%= f.label 'Profile Picture' %><br>
-  <%= f.file_field :photo %>
-</div>
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <%= f.password_field :password, autocomplete: "off",id:"password", name:"password", placeholder:"Password", class:"input-xlarge" %>
+        
+        
+        <p class="help-block">Password should be at least 4 characters</p>
+      </div>
+    </div>
+   <!-- Conform Password -->
+    <div class="control-group">
+      <!-- Password -->
+      
+      <%= f.label :password_confirmation, class:"control-label" , for:"password_confirm" %>
+      <div class="controls">
+        
+    <%= f.password_field :password_confirmation, autocomplete: "off", id:"password_confirm", name:"password_confirm", placeholder:"" ,class:"input-xlarge" %>
+       
+        <p class="help-block">Please confirm password</p>
+      </div>
+    </div>
+    <!--photo-->
+     <div class="control-group">
+     
+      <div class="controls">
+       
+       <%= f.label 'Profile Picture' %><br>
+  <%= f.file_field :photo , class: "picmid" %>
+      </div>
+    </div>
+    <br>
+   <!-- Sign up submit -->
+    <div class="control-group">
+     
+      <div class="controls">
+        
+         <%= f.submit"Sign up",class:"btn btn-success" %>
+      </div>
+    </div>
+    <br>
+    </div>
+    </div>
+    </div>
+    
+     </div>
+    </div> 
+ <% end %>
+ <%= render "devise/shared/links" %>

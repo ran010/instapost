@@ -11,7 +11,8 @@ class PostsController < ApplicationController
     before_action :is_owner?, only: [:edit, :update, :destroy
     ]
     def index
-      @posts = Post.all.order('created_at DESC')
+      
+       @posts = Post.order("created_at ASC").paginate(:page => params[:page], :per_page => 20)
     end
     def edit
         @post = Post.find(params[:id])
@@ -31,7 +32,7 @@ class PostsController < ApplicationController
         redirect_to root_path
     end
     def show
-        @post = Post.find(params[:id])
+        @post = Post.order("id ASC").find(params[:id])
     end
     def new
         @post = Post.new
