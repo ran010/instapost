@@ -4,4 +4,6 @@ module PostsHelper
   @post.create(post_params)
   redirect_to root_path
     end
+    
+    
 end

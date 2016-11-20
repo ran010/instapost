@@ -125,13 +125,15 @@ nav {
 }
 
 .prof_show {
-  width: 60%;
+  display: block;
+    margin: auto;
+    width: 40%;
   height: 60%;
-  margin-top: 30px;
+  
+  
   border-radius:50%;
   padding:10px;
-  margin-right:auto;
-  margin-left:auto;
+ 
 }
 
 .prof_post_box {
@@ -143,7 +145,13 @@ nav {
   border-color: #818488;
   color: #818488;
 }
-
+.txt{
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+   font-size: 18px;
+  text-align:center;
+  color:blue;
+}
 .prof_pic {
   border-radius: 50%;
   height: 150px;

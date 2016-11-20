@@ -1,18 +1,10 @@
 class PostsController < ApplicationController
-  
-  def upvote
+
+    before_action :is_owner?, only: [:edit, :update, :destroy]
     
-  end
-
-  def downvote
-
-  end
-  
-    before_action :is_owner?, only: [:edit, :update, :destroy
-    ]
     def index
       
-       @posts = Post.order("created_at ASC").paginate(:page => params[:page], :per_page => 20)
+       @posts = Post.order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
     end
     def edit
         @post = Post.find(params[:id])
@@ -32,7 +24,7 @@ class PostsController < ApplicationController
         redirect_to root_path
     end
     def show
-        @post = Post.order("id ASC").find(params[:id])
+        @post = Post.order("created_at DESC").find(params[:id])
     end
     def new
         @post = Post.new
