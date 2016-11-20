@@ -20,7 +20,7 @@
       
       <div class="controls">
          
-  <%= f.text_field :name, autofocus: true, id:"username", name:"username", placeholder:"Name", class:"input-xlarge" %>
+  <%= f.text_field :name, autofocus: true, id:"username", placeholder:"Name", class:"input-xlarge" %>
         
         <p class="help-block">Username can contain any letters or numbers, without spaces</p>
       </div>
@@ -32,7 +32,7 @@
        <%= f.label :email,class:"control-label", for:"email" %>
       <div class="controls">
        
-    <%= f.email_field :email, autofocus: true, id:"email", name:"email", placeholder:"Email", class:"input-xlarge" %>
+    <%= f.email_field :email, autofocus: true, id:"email", placeholder:"Email", class:"input-xlarge" %>
        
         <p class="help-block">Please provide your E-mail</p>
       </div>
@@ -47,7 +47,7 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off",id:"password", name:"password", placeholder:"Password", class:"input-xlarge" %>
+    <%= f.password_field :password, autocomplete: "off",id:"password", placeholder:"Password", class:"input-xlarge" %>
         
         
         <p class="help-block">Password should be at least 4 characters</p>
@@ -60,7 +60,7 @@
       <%= f.label :password_confirmation, class:"control-label" , for:"password_confirm" %>
       <div class="controls">
         
-    <%= f.password_field :password_confirmation, autocomplete: "off", id:"password_confirm", name:"password_confirm", placeholder:"" ,class:"input-xlarge" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", id:"password_confirm", placeholder:"" ,class:"input-xlarge" %>
        
         <p class="help-block">Please confirm password</p>
       </div>
