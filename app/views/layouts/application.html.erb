@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- 
+
   <title>Share Your Photos Online - Instapost</title>
   <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -15,11 +15,9 @@
     <div class = "col-lg-6 col-lg-offset-3">
       <div class="row">
         <div class="nav_wrapper">
-
           <div class="col-xs-4">
             <span class="pull-left brand"><%= link_to 'Instapost', root_path %></span>
           </div>
-
           <div class="col-xs-8">
             <% if user_signed_in? %>
               <span class="nav_links pull-right"><%= link_to 'New Post', new_post_path %></span>
@@ -30,9 +28,7 @@
               <span class="nav_links pull-right"><%= link_to 'Log In', new_user_session_path %></span>
             <% end %>
           </div>
-
         </div>
-        
       </div>
     </div>
   </div>

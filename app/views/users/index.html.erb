@@ -1,25 +1,14 @@
 <h1>hello</h1>
-
 <% @posts.each do |post| %>
-  
   <div class="post_box  col-md-6 centered">
-
    <div class="post_header">
   <%= image_tag post.user.photo, class: 'prof_pic_small pic' %>
- 
   <%= link_to post.user.name, user_path(post.user_id) %>
   <span class="timestamp pull-right"><%= distance_of_time_in_words(DateTime.now, post.created_at) %> ago</span>
 </div>
- 
- 
- 
- 
     <%= image_tag post.photo, class: 'photo tagpic' %>
-    
     <div class="post_body">
-
       <%= link_to post.user.name, user_path(post.user_id) %> <%= post.description %>
-
     </div>
         <div class="post_body">
  <% if post.user == current_user %>
@@ -28,14 +17,9 @@
   <% end %>
   </div>
     <div class="post_comments">
-
       <% post.comments.each do |comment| %>
-
         <%= link_to comment.user.name,  user_path(comment.user_id) %> <%= comment.text %>
-
       <% end %>
-
-
       <hr>
       <span id="likes_container_<%= post.id %>">
   <%= render partial: 'likes', locals: {post: post} %>
@@ -48,10 +32,4 @@
 <% end %>
     </div>
   </div>
-
-
-
-
-
-
 <% end %>
